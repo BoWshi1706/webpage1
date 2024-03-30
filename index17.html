@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BeYouDefinning Fashion</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+ 
+    background-image: url('p1.jpg'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+    color: #FFFFFF;
+    cursor: pointer;
+  }
+  header {
+    background-color: #1DA1F2; 
+    padding: 20px;
+    text-align: center;
+    color: #FFFFFF; 
+  }
+  footer {
+    background-color: #1DA1F2;
+    padding: 20px;
+    text-align: center;
+    color: #FFFFFF; 
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+  }
+  .container {
+    margin: 0 auto;
+    padding: 20px;
+    max-width: 400px;
+    background-color: #F6CAC9;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  input[type="text"],
+  input[type="password"],
+  input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    box-sizing: border-box;
+  }
+  input[type="submit"] {
+    background-color: #4caf50;
+    color: #fff;
+    cursor: pointer;
+  }
+  input[type="submit"]:hover {
+    background-color: #45a049;
+  }
+  footer a {
+    color: #FFFFFF; 
+    text-decoration: none;
+    margin: 0 10px;
+  }
+</style>
+</head>
+<body>
+  <header>
+    <h1>BeYouDefinning Fashion</h1>
+    <nav>
+      <a href="#">Home</a> | 
+      <a href="#">Contact</a> | 
+      <a href="#">About</a>
+    </nav>
+  </header>
+
+  <div class="container">
+    <h2>Login</h2>
+    <form id="loginForm">
+      <input type="text" id="username" placeholder="Username" required>
+      <input type="password" id="password" placeholder="Password" required>
+      <input type="submit" value="Login">
+    </form>
+  </div>
+
+  <footer>
+    <p>
+      Email: <a href="mailto:info@beyoudefinning.com">info@beyoudefinning.com</a> | 
+      Phone: <a href="tel:+1234567890">+1234567890</a>
+    </p>
+    <p>&copy; 2024 BeYouDefinning Fashion. All rights reserved.</p>
+  </footer>
+
+  <script>
+    
+    function handleSubmit(event) {
+      event.preventDefault();
+      const username = document.getElementById('username').value;
+      const password = document.getElementById('password').value;
+      alert('Username: ' + username + '\nPassword: ' + password);
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+      const form = document.getElementById('loginForm');
+      form.addEventListener('submit', handleSubmit);
+    });
+  </script>
+</body>
+</html>
